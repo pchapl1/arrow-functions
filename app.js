@@ -108,42 +108,32 @@ const newObject = array => ({
 
 
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+const sum = (a,b,c,d) => a + b + c + d
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
+console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+const objectLit = ()=> ({
+    key1 : 'value1',
+    key2 : 'value2',
+    key3 : 'value3'
+})
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
-  let sum = a + b;
-  let product = a * b;
-  return [sum, product];
-};
+const sumAndProduct = (a, b) => [(a + b), (a * b)]
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
 
+const message = name => `Hello, ${name}`
 
-let message = function(name) {
-  return `Hello, ${name}!`;
-};
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+console.log(message('Allie'));
 
 
 let Student = function(name, age, hometown) {
@@ -179,7 +169,7 @@ Student.courseName = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -190,17 +180,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// an instance of a student object
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// an instance of a Window object
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// because arrow functions are not bound to "this" like the other functions.  it will throw a typeError
